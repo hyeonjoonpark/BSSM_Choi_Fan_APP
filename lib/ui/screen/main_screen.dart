@@ -1,4 +1,4 @@
-import 'package:fan_app/utils/colors/colors.dart';
+import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,21 +14,9 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          leading: const Icon(
-            Icons.menu_rounded,
-            color: MainColors.black,
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.more_vert,
-                color: MainColors.black,
-              ),
-            ),
-          ],
+        appBar: navBar(
+          url: "/",
+          icon: Icons.arrow_back_ios_new_rounded,
         ),
       ),
     );

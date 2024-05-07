@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-PreferredSizeWidget? navBar() {
+PreferredSizeWidget? navBar({String? url, IconData? icon}) {
   return PreferredSize(
     preferredSize: const Size.fromHeight(kToolbarHeight),
     child: AppBar(
@@ -11,13 +11,13 @@ PreferredSizeWidget? navBar() {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            icon: const Icon(
-              Icons.arrow_back_ios,
+            icon: Icon(
+              icon,
               color: Colors.black87,
               size: 20,
             ),
             onPressed: () {
-              Get.offAndToNamed("/");
+              Get.offAndToNamed(url ?? "/");
             },
           ),
         ],
