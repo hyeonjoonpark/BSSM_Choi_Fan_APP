@@ -1,4 +1,3 @@
-import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:fan_app/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
