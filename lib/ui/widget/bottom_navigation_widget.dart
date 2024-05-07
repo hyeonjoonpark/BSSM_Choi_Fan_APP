@@ -7,31 +7,31 @@ Widget bottomNavigationBarWidget(BottomNavigationProvider provider) {
     items: const [
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        label: '메뉴1',
+        label: '홈',
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.people,
+          Icons.article,
         ),
-        label: '메뉴2',
+        label: '게시판',
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.person,
+          Icons.shop,
         ),
-        label: '메뉴3',
+        label: '굿즈샵',
       ),
       BottomNavigationBarItem(
         icon: Icon(
           Icons.search,
         ),
-        label: '메뉴4',
+        label: '검색',
       ),
       BottomNavigationBarItem(
         icon: Icon(
           Icons.settings,
         ),
-        label: '메뉴5',
+        label: '설정',
       ),
     ],
     onTap: (index) {
