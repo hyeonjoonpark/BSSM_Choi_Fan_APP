@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 // 명명된 매개변수로 커스텀 navigation bar
-PreferredSizeWidget? navBar({String? url, IconData? icon}) {
+PreferredSizeWidget? navBar({VoidCallback? onPress, IconData? icon}) {
   return PreferredSize(
     preferredSize: const Size.fromHeight(kToolbarHeight),
     child: AppBar(
@@ -17,9 +16,7 @@ PreferredSizeWidget? navBar({String? url, IconData? icon}) {
               color: Colors.black87,
               size: 20,
             ),
-            onPressed: () {
-              Get.offAndToNamed(url ?? "/");
-            },
+            onPressed: onPress,
           ),
         ],
       ),

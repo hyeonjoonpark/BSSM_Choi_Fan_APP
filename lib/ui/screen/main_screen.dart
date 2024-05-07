@@ -1,6 +1,7 @@
 import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
         appBar: navBar(
-          url: "/",
+          onPress: () => Get.offAndToNamed("/"),
           icon: Icons.arrow_back_ios_new_rounded,
         ),
       ),
