@@ -117,11 +117,21 @@ class _MainScreenState extends State<MainScreen> {
                               children: [
                                 Text(
                                   "부소마 GOD",
-                                  style: MainTextStyle.bold_20,
+                                  style: TextStyle(
+                                    color: MainColors.primary,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Noto_Sans_KR",
+                                  ),
                                 ),
                                 Text(
                                   "자세히 보기 〉",
-                                  style: MainTextStyle.bold_12,
+                                  style: TextStyle(
+                                    color: MainColors.primary,
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Noto_Sans_KR",
+                                  ),
                                 ),
                               ],
                             ),
@@ -147,11 +157,21 @@ class _MainScreenState extends State<MainScreen> {
                               children: [
                                 Text(
                                   "부소마 뉴진스",
-                                  style: MainTextStyle.bold_20,
+                                  style: TextStyle(
+                                    color: MainColors.primary,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Noto_Sans_KR",
+                                  ),
                                 ),
                                 Text(
                                   "자세히 보기 〉",
-                                  style: MainTextStyle.bold_12,
+                                  style: TextStyle(
+                                    color: MainColors.primary,
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Noto_Sans_KR",
+                                  ),
                                 ),
                               ],
                             ),
