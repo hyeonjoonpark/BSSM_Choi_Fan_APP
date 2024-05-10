@@ -1,4 +1,5 @@
 import 'package:fan_app/ui/widget/navbar.dart';
+import 'package:fan_app/ui/widget/teacher_list.dart';
 import 'package:fan_app/utils/colors/colors.dart';
 import 'package:fan_app/utils/fonts/main_text_style.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,16 +17,55 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   List<Map<String, String>> somaGOD = [
-    {"image": "", "name": "최병준 선생님"},
-    {"image": "", "name": "차수민 선생님"},
-    {"image": "", "name": "박제현 선생님"},
-    {"image": "", "name": "박건우 선생님"},
+    {
+      "image":
+          "https://i.namu.wiki/i/ZnBMAAGJaiFKqDmASXCt-977Xuq6gLA-G8AsD4K1BKCVBEzrjISoW9QyfcSKPnacwuBpCGSSyBtCJv8E-UocNQ.webp",
+      "name": "최병준 선생님"
+    },
+    {
+      "image":
+          "https://img.sbs.co.kr/newsnet/etv/upload/2022/02/15/30000743641_1280.jpg",
+      "name": "차수민 선생님"
+    },
+    {
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJILP5EjF59E4CwEcnqaAjiLaE2Yn2ibPpeWxjdLFOw&s",
+      "name": "박제현 선생님"
+    },
+    {
+      "image":
+          "https://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/03/21/d073425d-9762-4c03-b203-814838f33327.jpg",
+      "name": "박건우 선생님"
+    },
+    {
+      "image":
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYXG4f-9uDgL2LsGuP-o_LLPlmgTgX_UQIj451D-3p9w&s",
+      "name": "이세준 선생님"
+    },
   ];
 
-  List<Map<String, String>> somaSES = [
-    {"image": "", "name": "박민하 선생님"},
-    {"image": "", "name": "이정하 선생님"},
-    {"image": "", "name": "김상화 선생님"},
+  List<Map<String, String>> somaNewJeans = [
+    {
+      "image":
+          "https://www.yeongnam.com/mnt/file/202311/20231121001110427_1.jpg",
+      "name": "박민하 선생님"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/LcS-451yDxI/maxresdefault.jpg",
+      "name": "이정하 선생님"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/k3jV6DMTCSE/maxresdefault.jpg",
+      "name": "김상화 선생님"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/SiDYYqj9Knk/maxresdefault.jpg",
+      "name": "진예빈 선생님"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/hWCOlJOySog/maxresdefault.jpg",
+      "name": "이나영 선생님"
+    },
   ];
 
   @override
@@ -64,9 +104,9 @@ class _MainScreenState extends State<MainScreen> {
                       child: Column(
                         children: [
                           Container(
-                            decoration: const BoxDecoration(
-                              color: MainColors.grey,
-                            ),
+                            // decoration: const BoxDecoration(
+                            //   color: MainColors.grey,
+                            // ),
                             width: double.infinity,
                             padding: EdgeInsets.symmetric(
                               horizontal: 0.05.sw,
@@ -76,7 +116,7 @@ class _MainScreenState extends State<MainScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "소마고 GOD",
+                                  "부소마 GOD",
                                   style: MainTextStyle.bold_20,
                                 ),
                                 Text(
@@ -89,41 +129,14 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(
                             height: 0.02.sh,
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: somaGOD
-                                  .map((entry) => Padding(
-                                        padding: EdgeInsets.symmetric(
-                                          vertical: 0.01.sh,
-                                          horizontal: 0.02.sh,
-                                        ),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            const Icon(
-                                              Icons.person,
-                                            ),
-                                            const SizedBox(
-                                              width: 8,
-                                            ), // 아이콘과 텍스트 사이의 가로 간격 조정
-                                            Text(
-                                              entry["name"] ?? "",
-                                            ), // 텍스트를 아이콘 오른쪽으로 배치
-                                          ],
-                                        ),
-                                      ))
-                                  .toList(),
-                            ),
-                          ),
+                          list(somaGOD),
                           SizedBox(
                             height: 0.02.sh,
                           ),
                           Container(
-                            decoration: const BoxDecoration(
-                              color: MainColors.grey,
-                            ),
+                            // decoration: const BoxDecoration(
+                            //   color: MainColors.grey,
+                            // ),
                             width: double.infinity,
                             padding: EdgeInsets.symmetric(
                               horizontal: 0.05.sw,
@@ -133,7 +146,7 @@ class _MainScreenState extends State<MainScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "소마고 SES",
+                                  "부소마 뉴진스",
                                   style: MainTextStyle.bold_20,
                                 ),
                                 Text(
@@ -146,34 +159,7 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(
                             height: 0.02.sh,
                           ),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: somaSES
-                                  .map((entry) => Padding(
-                                        padding: EdgeInsets.symmetric(
-                                          vertical: 0.01.sh,
-                                          horizontal: 0.02.sh,
-                                        ),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          children: [
-                                            const Icon(
-                                              Icons.person,
-                                            ),
-                                            const SizedBox(
-                                              width: 8,
-                                            ), // 아이콘과 텍스트 사이의 가로 간격 조정
-                                            Text(
-                                              entry["name"] ?? "",
-                                            ), // 텍스트를 아이콘 오른쪽으로 배치
-                                          ],
-                                        ),
-                                      ))
-                                  .toList(),
-                            ),
-                          ),
+                          list(somaNewJeans),
                         ],
                       ),
                     ),
