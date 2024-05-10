@@ -15,6 +15,19 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  List<Map<String, String>> somaGOD = [
+    {"image": "", "name": "최병준 선생님"},
+    {"image": "", "name": "차수민 선생님"},
+    {"image": "", "name": "박제현 선생님"},
+    {"image": "", "name": "박건우 선생님"},
+  ];
+
+  List<Map<String, String>> somaSES = [
+    {"image": "", "name": "박민하 선생님"},
+    {"image": "", "name": "이정하 선생님"},
+    {"image": "", "name": "김상화 선생님"},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -40,97 +53,131 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
               SingleChildScrollView(
-                child: Container(
-                  width: double.infinity,
-                  height: 0.24.sh,
-                  decoration: const BoxDecoration(
-                    color: MainColors.grey,
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 0.05.sw,
-                          vertical: 0.02.sh,
-                        ),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Title",
-                              style: MainTextStyle.bold_20,
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 1.0.sw,
+                      // decoration: const BoxDecoration(
+                      //   color: MainColors.grey,
+                      // ),
+                      child: Column(
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: MainColors.grey,
                             ),
-                            Text(
-                              "자세히 보기 〉",
-                              style: MainTextStyle.bold_20,
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 0.05.sw,
+                              vertical: 0.02.sh,
                             ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 0.2.sw,
-                                height: 0.1.sh,
-                                decoration: BoxDecoration(
-                                  color: MainColors.primary,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(50.r),
-                                  ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "소마고 GOD",
+                                  style: MainTextStyle.bold_20,
                                 ),
-                              ),
-                              Container(
-                                width: 0.2.sw,
-                                height: 0.1.sh,
-                                decoration: BoxDecoration(
-                                  color: MainColors.primary,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(50.r),
-                                  ),
+                                Text(
+                                  "자세히 보기 〉",
+                                  style: MainTextStyle.bold_12,
                                 ),
-                              ),
-                              Container(
-                                width: 0.2.sw,
-                                height: 0.1.sh,
-                                decoration: BoxDecoration(
-                                  color: MainColors.primary,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(50.r),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 0.2.sw,
-                                height: 0.1.sh,
-                                decoration: BoxDecoration(
-                                  color: MainColors.primary,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(50.r),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: 0.2.sw,
-                                height: 0.1.sh,
-                                decoration: BoxDecoration(
-                                  color: MainColors.primary,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(50.r),
-                                  ),
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: somaGOD
+                                  .map((entry) => Padding(
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 0.01.sh,
+                                          horizontal: 0.02.sh,
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const Icon(
+                                              Icons.person,
+                                            ),
+                                            const SizedBox(
+                                              width: 8,
+                                            ), // 아이콘과 텍스트 사이의 가로 간격 조정
+                                            Text(
+                                              entry["name"] ?? "",
+                                            ), // 텍스트를 아이콘 오른쪽으로 배치
+                                          ],
+                                        ),
+                                      ))
+                                  .toList(),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: MainColors.grey,
+                            ),
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 0.05.sw,
+                              vertical: 0.02.sh,
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "소마고 SES",
+                                  style: MainTextStyle.bold_20,
+                                ),
+                                Text(
+                                  "자세히 보기 〉",
+                                  style: MainTextStyle.bold_12,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: somaSES
+                                  .map((entry) => Padding(
+                                        padding: EdgeInsets.symmetric(
+                                          vertical: 0.01.sh,
+                                          horizontal: 0.02.sh,
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            const Icon(
+                                              Icons.person,
+                                            ),
+                                            const SizedBox(
+                                              width: 8,
+                                            ), // 아이콘과 텍스트 사이의 가로 간격 조정
+                                            Text(
+                                              entry["name"] ?? "",
+                                            ), // 텍스트를 아이콘 오른쪽으로 배치
+                                          ],
+                                        ),
+                                      ))
+                                  .toList(),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],

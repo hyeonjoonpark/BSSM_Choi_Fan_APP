@@ -37,4 +37,11 @@ class MainTextStyle {
     color: MainColors.black,
     fontWeight: FontWeight.w700,
   );
+  static const bold_12 = TextStyle(
+    fontFamily: "Noto_Sans_KR",
+    fontStyle: FontStyle.normal,
+    fontSize: 12.0,
+    color: MainColors.black,
+    fontWeight: FontWeight.w700,
+  );
 }
