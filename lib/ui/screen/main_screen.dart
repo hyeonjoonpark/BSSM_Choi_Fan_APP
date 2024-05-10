@@ -98,15 +98,9 @@ class _MainScreenState extends State<MainScreen> {
                   children: [
                     Container(
                       width: 1.0.sw,
-                      // decoration: const BoxDecoration(
-                      //   color: MainColors.grey,
-                      // ),
                       child: Column(
                         children: [
                           Container(
-                            // decoration: const BoxDecoration(
-                            //   color: MainColors.grey,
-                            // ),
                             width: double.infinity,
                             padding: EdgeInsets.symmetric(
                               horizontal: 0.05.sw,
@@ -144,9 +138,6 @@ class _MainScreenState extends State<MainScreen> {
                             height: 0.02.sh,
                           ),
                           Container(
-                            // decoration: const BoxDecoration(
-                            //   color: MainColors.grey,
-                            // ),
                             width: double.infinity,
                             padding: EdgeInsets.symmetric(
                               horizontal: 0.05.sw,
