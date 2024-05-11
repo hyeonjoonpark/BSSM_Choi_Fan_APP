@@ -11,7 +11,7 @@ Widget bottomNavigationBarWidget(BottomNavigationProvider provider) {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.article,
+          Icons.article_rounded,
         ),
         label: '게시판',
       ),
@@ -23,9 +23,9 @@ Widget bottomNavigationBarWidget(BottomNavigationProvider provider) {
       ),
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.search,
+          Icons.ios_share,
         ),
-        label: '검색',
+        label: '일정공유',
       ),
       BottomNavigationBarItem(
         icon: Icon(
