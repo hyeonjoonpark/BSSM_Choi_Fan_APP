@@ -18,7 +18,7 @@ Widget goodsList(List<Map<String, dynamic>> list) {
                 children: [
                   Container(
                     width: 100,
-                    height: 100,
+                    height: 140,
                     alignment: Alignment.centerLeft,
                     decoration: BoxDecoration(
                       color: MainColors.primary,
