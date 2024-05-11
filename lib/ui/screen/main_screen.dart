@@ -1,3 +1,4 @@
+import 'package:fan_app/ui/widget/goods_list.dart';
 import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:fan_app/ui/widget/teacher_list.dart';
 import 'package:fan_app/utils/colors/colors.dart';
@@ -68,6 +69,16 @@ class _MainScreenState extends State<MainScreen> {
     },
   ];
 
+  List<Map<String, dynamic>> goods = [
+    {
+      "image":
+          "https://www.yeongnam.com/mnt/file/202311/20231121001110427_1.jpg",
+      "name": "최병준 선생님 포토카드",
+      "price": 1000,
+      "teacher": "최병준",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -106,10 +117,10 @@ class _MainScreenState extends State<MainScreen> {
                               horizontal: 0.05.sw,
                               vertical: 0.02.sh,
                             ),
-                            child: const Row(
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   "부소마 GOD",
                                   style: TextStyle(
                                     color: MainColors.primary,
@@ -118,13 +129,22 @@ class _MainScreenState extends State<MainScreen> {
                                     fontFamily: "Noto_Sans_KR",
                                   ),
                                 ),
-                                Text(
-                                  "자세히 보기 〉",
-                                  style: TextStyle(
-                                    color: MainColors.primary,
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Noto_Sans_KR",
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                      MainColors.white,
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    "자세히 보기 〉",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: MainColors.primary,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Noto_Sans_KR",
+                                    ),
                                   ),
                                 ),
                               ],
@@ -133,7 +153,7 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(
                             height: 0.02.sh,
                           ),
-                          list(somaGOD),
+                          teacherList(somaGOD),
                           SizedBox(
                             height: 0.02.sh,
                           ),
@@ -143,10 +163,10 @@ class _MainScreenState extends State<MainScreen> {
                               horizontal: 0.05.sw,
                               vertical: 0.02.sh,
                             ),
-                            child: const Row(
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   "부소마 뉴진스",
                                   style: TextStyle(
                                     color: MainColors.primary,
@@ -155,13 +175,22 @@ class _MainScreenState extends State<MainScreen> {
                                     fontFamily: "Noto_Sans_KR",
                                   ),
                                 ),
-                                Text(
-                                  "자세히 보기 〉",
-                                  style: TextStyle(
-                                    color: MainColors.primary,
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Noto_Sans_KR",
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                      MainColors.white,
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    "자세히 보기 〉",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: MainColors.primary,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Noto_Sans_KR",
+                                    ),
                                   ),
                                 ),
                               ],
@@ -170,7 +199,50 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(
                             height: 0.02.sh,
                           ),
-                          list(somaNewJeans),
+                          teacherList(somaNewJeans),
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 0.05.sw,
+                              vertical: 0.02.sh,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text(
+                                  "굿즈",
+                                  style: TextStyle(
+                                    color: MainColors.black,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Noto_Sans_KR",
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                      MainColors.white,
+                                    ),
+                                  ),
+                                  child: const Text(
+                                    "자세히 보기 〉",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: MainColors.primary,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Noto_Sans_KR",
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          goodsList(goods),
                         ],
                       ),
                     ),
