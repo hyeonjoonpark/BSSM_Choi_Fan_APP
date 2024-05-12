@@ -1,7 +1,6 @@
 List<Map<String, dynamic>> goods = [
   {
-    "image":
-        "https://i.namu.wiki/i/ZnBMAAGJaiFKqDmASXCt-977Xuq6gLA-G8AsD4K1BKCVBEzrjISoW9QyfcSKPnacwuBpCGSSyBtCJv8E-UocNQ.webp",
+    "image": "",
     "name": "포토카드",
     "price": 1000,
     "teacher": "최병준",

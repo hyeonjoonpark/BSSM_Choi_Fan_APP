@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 const Text(
-                                  "부소마 GOD",
+                                  "부소마 샤이니",
                                   style: TextStyle(
                                     color: MainColors.primary,
                                     fontSize: 20.0,
@@ -69,13 +69,8 @@ class _MainScreenState extends State<MainScreen> {
                                     fontFamily: "Noto_Sans_KR",
                                   ),
                                 ),
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                      MainColors.white,
-                                    ),
-                                  ),
+                                GestureDetector(
+                                  onTap: () {},
                                   child: const Text(
                                     "자세히 보기 〉",
                                     textAlign: TextAlign.center,
@@ -115,13 +110,8 @@ class _MainScreenState extends State<MainScreen> {
                                     fontFamily: "Noto_Sans_KR",
                                   ),
                                 ),
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                      MainColors.white,
-                                    ),
-                                  ),
+                                GestureDetector(
+                                  onTap: () {},
                                   child: const Text(
                                     "자세히 보기 〉",
                                     textAlign: TextAlign.center,
@@ -161,18 +151,13 @@ class _MainScreenState extends State<MainScreen> {
                                     fontFamily: "Noto_Sans_KR",
                                   ),
                                 ),
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                      MainColors.white,
-                                    ),
-                                  ),
+                                GestureDetector(
+                                  onTap: () {},
                                   child: const Text(
                                     "자세히 보기 〉",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      color: MainColors.primary,
+                                      color: MainColors.black,
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w700,
                                       fontFamily: "Noto_Sans_KR",
@@ -183,6 +168,9 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                           ),
                           goodsList(goods),
+                          SizedBox(
+                            height: 0.02.sh,
+                          ),
                         ],
                       ),
                     ),

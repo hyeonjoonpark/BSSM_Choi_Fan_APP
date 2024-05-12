@@ -15,6 +15,7 @@ Widget goodsList(List<Map<String, dynamic>> list) {
                 horizontal: 0.02.sh,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: 100,
@@ -22,7 +23,7 @@ Widget goodsList(List<Map<String, dynamic>> list) {
                     alignment: Alignment.centerLeft,
                     decoration: BoxDecoration(
                       color: MainColors.primary,
-                      borderRadius: BorderRadius.circular(0),
+                      borderRadius: BorderRadius.circular(15),
                       image: DecorationImage(
                         image: Image.network(
                           entry["image"]!,
@@ -32,26 +33,23 @@ Widget goodsList(List<Map<String, dynamic>> list) {
                     ),
                   ),
                   const SizedBox(
-                    width: 8,
-                  ), // 아이콘과 텍스트 사이의 가로 간격 조정
+                    height: 8,
+                  ),
                   Text(
                     entry["name"] ?? "",
                     style: MainTextStyle.bold_12,
+                    textAlign: TextAlign.left, // 텍스트 왼쪽 정렬
+                  ),
+                  Text(
+                    "${entry["price"].toString()}원",
+                    style: const TextStyle(
+                      color: MainColors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "${entry["price"].toString()}원",
-                        style: const TextStyle(
-                          color: MainColors.black,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
                       Text(
                         "#${entry["teacher"]}",
                         style: const TextStyle(
@@ -61,8 +59,7 @@ Widget goodsList(List<Map<String, dynamic>> list) {
                         ),
                       ),
                     ],
-                  ),
-                  // 텍스트를 아이콘 오른쪽으로 배치
+                  )
                 ],
               ),
             ),

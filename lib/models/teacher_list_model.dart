@@ -1,17 +1,17 @@
 List<Map<String, String>> somaGOD = [
   {
     "image":
-        "https://i.namu.wiki/i/ZnBMAAGJaiFKqDmASXCt-977Xuq6gLA-G8AsD4K1BKCVBEzrjISoW9QyfcSKPnacwuBpCGSSyBtCJv8E-UocNQ.webp",
+        "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99C75E375A46427E33",
     "name": "최병준 선생님"
   },
   {
     "image":
-        "https://img.sbs.co.kr/newsnet/etv/upload/2022/02/15/30000743641_1280.jpg",
+        "https://pbs.twimg.com/media/Dj7eGpwUcAIQIJ5?format=jpg&name=small",
     "name": "차수민 선생님"
   },
   {
     "image":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJILP5EjF59E4CwEcnqaAjiLaE2Yn2ibPpeWxjdLFOw&s",
+        "https://dimg.donga.com/wps/SPORTS/IMAGE/2017/11/20/87370166.2.jpg",
     "name": "박제현 선생님"
   },
   {
@@ -21,7 +21,7 @@ List<Map<String, String>> somaGOD = [
   },
   {
     "image":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYXG4f-9uDgL2LsGuP-o_LLPlmgTgX_UQIj451D-3p9w&s",
+        "https://pbs.twimg.com/media/CGObDXTVAAE5IXt?format=png&name=small",
     "name": "이세준 선생님"
   },
 ];
