@@ -14,6 +14,7 @@ class BoardScreen extends StatefulWidget {
 class _BoardScreenState extends State<BoardScreen> {
   int currentPage = 0;
   final int pageSize = 5;
+  final int totalPage = (boards.length / 5).ceil();
 
   List<Map<String, dynamic>> getCurrentPageItems() {
     int start = currentPage * pageSize;
@@ -49,7 +50,7 @@ class _BoardScreenState extends State<BoardScreen> {
                 title: Text(
                   "★ 게시판운영 공지사항 ★",
                   style: TextStyle(
-                    color: Colors.red,
+                    color: MainColors.red,
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                   ),
@@ -89,21 +90,60 @@ class _BoardScreenState extends State<BoardScreen> {
                 children: [
                   if (currentPage * pageSize > 0)
                     ElevatedButton(
+                      style: ButtonStyle(
+                        alignment: Alignment.center,
+                        backgroundColor: MaterialStateProperty.all(
+                          MainColors.primary,
+                        ),
+                      ),
                       onPressed: () {
-                        setState(() {
-                          currentPage--;
-                        });
+                        if (currentPage * pageSize == 0) {
+                          setState(() {
+                            currentPage = 0;
+                          });
+                        } else {
+                          setState(() {
+                            currentPage--;
+                          });
+                        }
                       },
-                      child: Text('이전 페이지'),
+                      child: const Text(
+                        '이전으로',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
-                  if (currentPage * pageSize < boards.length)
+                  if (currentPage < totalPage - 1)
                     ElevatedButton(
+                      style: ButtonStyle(
+                        alignment: Alignment.center,
+                        backgroundColor: MaterialStateProperty.all(
+                          MainColors.primary,
+                        ),
+                      ),
                       onPressed: () {
-                        setState(() {
-                          currentPage++;
-                        });
+                        if (currentPage * pageSize < boards.length) {
+                          setState(() {
+                            currentPage++;
+                          });
+                        }
+                        if (currentPage == boards.length) {
+                          setState(() {
+                            currentPage = boards.length - 1;
+                          });
+                        }
                       },
-                      child: Text('다음 페이지'),
+                      child: const Text(
+                        '다음으로',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
                 ],
               ),

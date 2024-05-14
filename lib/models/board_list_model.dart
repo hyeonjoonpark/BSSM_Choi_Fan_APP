@@ -52,5 +52,17 @@ List<Map<String, dynamic>> boards = [
     "writer": "박현준",
     "date": "2024-05-14",
     "teacher": "부소마 뉴진스",
+  },
+  {
+    "title": "최병준 선생님 목소리 너무 좋으심",
+    "writer": "박현준",
+    "date": "2024-05-14",
+    "teacher": "최병준",
+  },
+  {
+    "title": "박민하 선생님",
+    "writer": "박현준",
+    "date": "2024-05-14",
+    "teacher": "박민하",
   }
 ];
