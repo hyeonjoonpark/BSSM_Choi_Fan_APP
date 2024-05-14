@@ -23,10 +23,10 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
-        appBar: navBar(
-          onPress: () => Get.offAndToNamed("/"),
-          icon: Icons.arrow_back_ios_new_rounded,
-        ),
+        // appBar: navBar(
+        //   onPress: () => Get.offAndToNamed("/"),
+        //   icon: Icons.arrow_back_ios_new_rounded,
+        // ),
         body: SingleChildScrollView(
           child: Column(
             children: [

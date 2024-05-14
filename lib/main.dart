@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -23,9 +24,12 @@ class MyApp extends StatelessWidget {
       ),
       home: MultiProvider(
         providers: [
-          ChangeNotifierProvider(create: (context) => CountProvider()),
           ChangeNotifierProvider(
-              create: (context) => BottomNavigationProvider())
+            create: (context) => CountProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => BottomNavigationProvider(),
+          ),
         ],
         child: Home(),
       ),
