@@ -28,16 +28,17 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   Container(
-                      width: 0.9.sw,
-                      margin: EdgeInsets.only(top: 0.27.sh),
-                      child: Text(
-                        "로그인하기",
-                        style: TextStyle(
-                          color: MainColors.primary,
-                          fontSize: 20.0.sp,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      )),
+                    width: 0.9.sw,
+                    margin: EdgeInsets.only(top: 0.27.sh),
+                    child: Text(
+                      "로그인하기",
+                      style: TextStyle(
+                        color: MainColors.primary,
+                        fontSize: 20.0.sp,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ),
                   Container(
                     width: 0.9.sw,
                     margin: EdgeInsets.only(top: 10.0.h),
