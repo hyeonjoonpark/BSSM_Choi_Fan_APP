@@ -95,6 +95,7 @@ class _BoardScreenState extends State<BoardScreen> {
                 final String writer = board['writer'] as String? ?? '';
                 final String date = board['date'] as String? ?? '';
                 final String teacher = board['teacher'] as String? ?? '';
+
                 return GestureDetector(
                   onTap: () {},
                   child: ListTile(
@@ -104,7 +105,9 @@ class _BoardScreenState extends State<BoardScreen> {
                     ),
                     subtitle: Text('작성자: $writer, 날짜: $date'),
                     trailing: Text(
-                      '#$teacher',
+                      teacher.split(",").length > 1
+                          ? '#${teacher.split(",")[0]} 외 ${teacher.split(",").length - 1}명'
+                          : '#$teacher',
                       style: const TextStyle(
                         color: MainColors.primary,
                         fontSize: 18,

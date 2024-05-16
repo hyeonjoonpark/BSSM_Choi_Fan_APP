@@ -37,28 +37,29 @@ class _BoardWriteScreenState extends State<BoardWriteScreen> {
 
   void _submitPost() {
     final content = _mentionsKey.currentState!.controller!.text;
+    print(content);
 
     // 멘션된 사람들의 이름 또는 아이디를 추출하는 로직
-    // 예시로, @[이름](아이디) 형식을 가정합니다.
-    final mentionPattern = RegExp(r'\@\[([^\]]+)\]\(([^)]+)\)');
+    // #이름으로 멘션했습니다
+    final mentionPattern = RegExp(r'#([\w가-힣]+)');
     final mentions = mentionPattern.allMatches(content);
 
     List<String> mentionedPeople = mentions.map((match) {
-      // 멘션된 사람들의 이름을 반환합니다. 아이디가 필요하다면 match.group(2)를 사용합니다.
+      // 멘션된 사람들의 이름을 반환합니다. 아이디가 필요하다면 다른 방식으로 추출해야 합니다.
       return match.group(1)!;
     }).toList();
 
     // 멘션한 사람들의 이름을 쉼표로 구분한 문자열로 변환
     final mentionedPeopleStr = mentionedPeople.join(', ');
-
     print(mentionedPeopleStr);
 
-    boards.add(
+    boards.insert(
+      0,
       {
         "title": _titleController.text,
         "content": content,
         "writer": "박현준",
-        "teacher": mentionedPeopleStr, // 멘션한 사람들의 이름 저장
+        "teacher": mentionedPeopleStr, // 멘션된 사람들의 이름을 저장합니다.
         "date": DateFormat('yyyy-MM-dd').format(DateTime.now()),
       },
     );
@@ -134,7 +135,7 @@ class _BoardWriteScreenState extends State<BoardWriteScreen> {
                               ),
                             );
                           },
-                          trigger: '@',
+                          trigger: '#',
                           style: const TextStyle(
                             color: MainColors.primary,
                           ),
