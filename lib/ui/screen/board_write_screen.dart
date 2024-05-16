@@ -22,7 +22,7 @@ class _BoardWriteScreenState extends State<BoardWriteScreen> {
   final ImagePicker _picker = ImagePicker();
   List<XFile> _pickedImages = [];
   final TextEditingController _titleController = TextEditingController();
-  final TextEditingController _contentController = TextEditingController();
+  // final TextEditingController _contentController = TextEditingController();
   final GlobalKey<FlutterMentionsState> _mentionsKey =
       GlobalKey<FlutterMentionsState>();
 
@@ -53,16 +53,13 @@ class _BoardWriteScreenState extends State<BoardWriteScreen> {
     final mentionedPeopleStr = mentionedPeople.join(', ');
     print(mentionedPeopleStr);
 
-    boards.insert(
-      0,
-      {
-        "title": _titleController.text,
-        "content": content,
-        "writer": "박현준",
-        "teacher": mentionedPeopleStr, // 멘션된 사람들의 이름을 저장합니다.
-        "date": DateFormat('yyyy-MM-dd').format(DateTime.now()),
-      },
-    );
+    boards.insert(0, {
+      "title": _titleController.text,
+      "content": content,
+      "writer": "박현준",
+      "teacher": mentionedPeopleStr, // 멘션된 사람들의 이름을 저장합니다.
+      "date": DateFormat('yyyy-MM-dd').format(DateTime.now()),
+    });
     Get.offAndToNamed("/");
   }
 
