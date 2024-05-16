@@ -1,4 +1,5 @@
 import 'package:fan_app/models/board_list_model.dart';
+import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:fan_app/utils/colors/colors.dart';
 import 'package:fan_app/utils/fonts/main_text_style.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,10 @@ class _BoardScreenState extends State<BoardScreen> {
 
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
+        appBar: navBar(
+          onPress: () => Get.offAndToNamed("/login"),
+          icon: Icons.login_rounded,
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [

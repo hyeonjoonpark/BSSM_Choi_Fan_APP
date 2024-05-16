@@ -88,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
                           SizedBox(
                             height: 0.02.sh,
                           ),
-                          teacherList(somaGOD),
+                          teacherList(somaShiny),
                           SizedBox(
                             height: 0.02.sh,
                           ),
