@@ -1,5 +1,6 @@
 import 'package:fan_app/provider/bottom_navigation_provider.dart';
 import 'package:fan_app/provider/count_provider.dart';
+import 'package:fan_app/routes/app_router.dart';
 import 'package:fan_app/ui/screen/home.dart';
 import 'package:fan_app/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialRoute: "/",
       debugShowCheckedModeBanner: false,
+      getPages: appRouter,
       theme: ThemeData(
         primaryColor: MainColors.primary,
       ),

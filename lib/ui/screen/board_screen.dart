@@ -3,6 +3,7 @@ import 'package:fan_app/utils/colors/colors.dart';
 import 'package:fan_app/utils/fonts/main_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/route_manager.dart';
 
 class BoardScreen extends StatefulWidget {
   const BoardScreen({super.key});
@@ -46,6 +47,30 @@ class _BoardScreenState extends State<BoardScreen> {
                 ),
               ),
               SizedBox(height: 0.02.sh),
+              Container(
+                width: 1.0.sw,
+                height: 0.08.sh,
+                padding: const EdgeInsets.only(left: 20),
+                alignment: Alignment.centerLeft,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Get.offAndToNamed("/board/write");
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      MainColors.primary,
+                    ),
+                  ),
+                  child: const Text(
+                    "작성",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ),
               const ListTile(
                 title: Text(
                   "★ 게시판운영 공지사항 ★",
