@@ -19,13 +19,14 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  bool isLoggined = false;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) => Scaffold(
         appBar: navBar(
           onPress: () => Get.offAndToNamed("/login"),
-          icon: Icons.login_rounded,
+          icon: isLoggined ? Icons.people : Icons.login_rounded,
         ),
         body: SingleChildScrollView(
           child: Column(

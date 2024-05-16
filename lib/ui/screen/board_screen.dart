@@ -17,6 +17,7 @@ class _BoardScreenState extends State<BoardScreen> {
   int currentPage = 0;
   final int pageSize = 5;
   final int totalPage = (boards.length / 5).ceil();
+  bool isLoggined = false;
 
   List<Map<String, dynamic>> getCurrentPageItems() {
     int start = currentPage * pageSize;
@@ -33,7 +34,7 @@ class _BoardScreenState extends State<BoardScreen> {
       builder: (context, child) => Scaffold(
         appBar: navBar(
           onPress: () => Get.offAndToNamed("/login"),
-          icon: Icons.login_rounded,
+          icon: isLoggined ? Icons.people : Icons.login_rounded,
         ),
         body: SingleChildScrollView(
           child: Column(

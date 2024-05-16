@@ -12,6 +12,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool isLoggined = true;
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -67,7 +68,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 0.9.sw,
                     margin: EdgeInsets.only(top: 10.0.h),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          isLoggined = true;
+                        });
+                        Get.offAndToNamed("/");
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
                           MainColors.primary,
