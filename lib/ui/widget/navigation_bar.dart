@@ -1,5 +1,6 @@
 import 'package:fan_app/provider/bottom_navigation_provider.dart';
 import 'package:fan_app/ui/screen/board_screen.dart';
+import 'package:fan_app/ui/screen/goods_screen.dart';
 import 'package:fan_app/ui/screen/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ Widget navigationBody(BottomNavigationProvider provider) {
           : provider.currentPage == 2
               ? const SafeArea(
                   child: Center(
-                    child: Text("Menu 3"),
+                    child: GoodsScreen(),
                   ),
                 )
               : provider.currentPage == 3
