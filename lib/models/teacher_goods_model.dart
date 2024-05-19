@@ -20,4 +20,11 @@ List<Map<String, dynamic>> goods = [
     "price": 5000,
     "teacher": "박건우",
   },
+  {
+    "image":
+        "https://item.kakaocdn.net/do/d07fbfecb165314911dcc52a6857449b7e6f47a71c79378b48860ead6a12bf11",
+    "name": "앨범",
+    "price": 7000,
+    "teacher": "이정하",
+  },
 ];
