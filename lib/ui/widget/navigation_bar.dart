@@ -25,7 +25,7 @@ Widget navigationBody(BottomNavigationProvider provider) {
               : provider.currentPage == 3
                   ? const SafeArea(
                       child: Center(
-                        child: Text("Menu 4"),
+                        child: Placeholder(),
                       ),
                     )
                   : const SafeArea(
