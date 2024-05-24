@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ScheduleScreen extends StatefulWidget {
   const ScheduleScreen({super.key});
@@ -10,6 +11,14 @@ class ScheduleScreen extends StatefulWidget {
 class _ScheduleScreenState extends State<ScheduleScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ScreenUtilInit(
+      builder: (context, child) => Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
+    );
   }
 }
