@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   Container(
-                    width: 0.9.sw,
+                    width: 0.92.sw,
                     margin: EdgeInsets.only(top: 10.0.h),
                     child: ElevatedButton(
                       onPressed: () {
