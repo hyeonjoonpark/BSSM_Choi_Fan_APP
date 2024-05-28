@@ -23,78 +23,83 @@ class _LoginScreenState extends State<LoginScreen> {
           },
           icon: Icons.arrow_back_ios_new,
         ),
+        resizeToAvoidBottomInset: true,
         body: SafeArea(
           child: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                children: [
-                  Container(
-                    width: 0.9.sw,
-                    margin: EdgeInsets.only(top: 0.27.sh),
-                    child: Text(
-                      "로그인하기",
-                      style: TextStyle(
-                        color: MainColors.primary,
-                        fontSize: 20.0.sp,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 0.9.sw,
-                    margin: EdgeInsets.only(top: 10.0.h),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "이메일을 입력해주세요",
-                        floatingLabelStyle: TextStyle(
-                          color: Colors.black,
+            child: Padding(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
+              child: Center(
+                child: Column(
+                  children: [
+                    Container(
+                      width: 0.9.sw,
+                      margin: EdgeInsets.only(top: 0.27.sh),
+                      child: Text(
+                        "로그인하기",
+                        style: TextStyle(
+                          color: MainColors.primary,
+                          fontSize: 20.0.sp,
+                          fontWeight: FontWeight.w900,
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    width: 0.9.sw,
-                    margin: EdgeInsets.only(top: 10.0.h),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: "비밀번호를 입력해주세요",
-                        floatingLabelStyle: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 0.92.sw,
-                    margin: EdgeInsets.only(top: 10.0.h),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          isLoggined = true;
-                        });
-                        Get.offAndToNamed("/");
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          MainColors.primary,
-                        ),
-                        elevation: MaterialStateProperty.all(0.0),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+                    Container(
+                      width: 0.9.sw,
+                      margin: EdgeInsets.only(top: 10.0.h),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: "이메일을 입력해주세요",
+                          floatingLabelStyle: TextStyle(
+                            color: Colors.black,
                           ),
                         ),
                       ),
-                      child: const Text(
-                        "로그인",
-                        style: TextStyle(
-                          color: MainColors.white,
-                          fontWeight: FontWeight.w700,
+                    ),
+                    Container(
+                      width: 0.9.sw,
+                      margin: EdgeInsets.only(top: 10.0.h),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: "비밀번호를 입력해주세요",
+                          floatingLabelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      width: 0.92.sw,
+                      margin: EdgeInsets.only(top: 10.0.h),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            isLoggined = true;
+                          });
+                          Get.offAndToNamed("/");
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            MainColors.primary,
+                          ),
+                          elevation: MaterialStateProperty.all(0.0),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                          ),
+                        ),
+                        child: const Text(
+                          "로그인",
+                          style: TextStyle(
+                            color: MainColors.white,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
