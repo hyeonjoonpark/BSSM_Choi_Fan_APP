@@ -2,7 +2,6 @@ import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:fan_app/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
