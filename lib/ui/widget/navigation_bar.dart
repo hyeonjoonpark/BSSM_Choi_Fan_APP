@@ -31,7 +31,7 @@ Widget navigationBody(BottomNavigationProvider provider) {
                     )
                   : const SafeArea(
                       child: Center(
-                        child: Text("Menu 5"),
+                        child: Placeholder(),
                       ),
                     );
 }
