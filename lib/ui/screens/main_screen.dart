@@ -4,7 +4,6 @@ import 'package:fan_app/ui/widget/goods_list.dart';
 import 'package:fan_app/ui/widget/navbar.dart';
 import 'package:fan_app/ui/widget/teacher_list.dart';
 import 'package:fan_app/utils/colors/colors.dart';
-import 'package:fan_app/utils/fonts/main_text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -37,10 +36,11 @@ class _MainScreenState extends State<MainScreen> {
                 decoration: const BoxDecoration(
                   color: MainColors.primary,
                 ),
-                child: const Center(
-                  child: Text(
-                    "자동 슬라이스 배너",
-                    style: MainTextStyle.bold_40,
+                child: Center(
+                  child: Image.asset(
+                    width: 1.0.sw,
+                    "assets/images/logo.png",
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),

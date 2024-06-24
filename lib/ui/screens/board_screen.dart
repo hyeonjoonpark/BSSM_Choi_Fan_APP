@@ -45,10 +45,11 @@ class _BoardScreenState extends State<BoardScreen> {
                 decoration: const BoxDecoration(
                   color: MainColors.primary,
                 ),
-                child: const Center(
-                  child: Text(
-                    "자동 슬라이스 배너",
-                    style: MainTextStyle.bold_40,
+                child: Center(
+                  child: Image.asset(
+                    width: 1.0.sw,
+                    "assets/images/logo.png",
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
